@@ -17,3 +17,4 @@ RUN yum -y update
 RUN yum install -y nginx && \
     yum clean all -y
 
+ENTRYPOINT ["nginx"]
