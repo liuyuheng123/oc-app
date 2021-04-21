@@ -1,6 +1,8 @@
 # We are basing our builder image on openshift base-centos7 image
 FROM image-registry.openshift-image-registry.svc:5000/openshift/python
 
+USER root
+
 # Enable epel repository for lighttpd
 RUN yum install -y epel-release
 
