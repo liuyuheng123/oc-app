@@ -17,4 +17,9 @@ RUN yum -y update
 RUN yum install -y nginx && \
     yum clean all -y
 
-ENTRYPOINT ["nginx"]
+RUN rm -f /usr/share/nginx/html/index.html && \
+    echo "Hello nginx!!!" > /usr/share/nginx/html/index.html
+
+USER nginx
+
+CMD ["nginx", "-g", "daemon off;"]
