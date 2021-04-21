@@ -15,9 +15,8 @@ RUN yum -y update
 # Install the required software, namely Lighttpd and
 # clean yum cache files, as they are not needed and will only make the image bigger in the end
 RUN yum install -y nginx && \
-    yum clean all -y
-
-RUN rm -f /usr/share/nginx/html/index.html && \
+    yum clean all -y && \
+    rm -f /usr/share/nginx/html/index.html && \
     echo "Hello nginx!!!" > /usr/share/nginx/html/index.html
 
 USER nginx
