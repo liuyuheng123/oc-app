@@ -1,5 +1,5 @@
 # We are basing our builder image on openshift base-centos7 image
-FROM image-registry.openshift-image-registry.svc:5000/openshift/python
+FROM quay.io/bitnami/python:3.8.9
 
 USER root
 
