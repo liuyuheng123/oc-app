@@ -17,6 +17,3 @@ RUN yum -y update
 RUN yum install -y nginx && \
     yum clean all -y
 
-USER 1001
-
-RUN while true; do echo hello; sleep 3; done
