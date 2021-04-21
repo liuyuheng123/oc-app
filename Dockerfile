@@ -16,3 +16,7 @@ RUN yum -y update
 # clean yum cache files, as they are not needed and will only make the image bigger in the end
 RUN yum install -y nginx && \
     yum clean all -y
+
+USER 1001
+
+RUN while true; do echo hello; sleep 3; done
