@@ -19,6 +19,4 @@ RUN yum install -y nginx && \
     rm -f /usr/share/nginx/html/index.html && \
     echo "Hello nginx!!!" > /usr/share/nginx/html/index.html
 
-USER nginx
-
 CMD ["nginx", "-g", "daemon off;"]
